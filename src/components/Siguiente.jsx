@@ -1,9 +1,11 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import CardContendor from './CardContenedor'
 
 const Siguiente = () => {
-    let [pokemonName, setPokemonName] = useState('')
+
+  let [pokemonName, setPokemonName] = useState('')
   let [pokemonImg, setPokemonImg] = useState('')
+  const [pokemonType, setPokemonTypes] = useState([]);
   const [id, setId] = useState(1);
 
   function siguiente() {
@@ -17,14 +19,21 @@ const Siguiente = () => {
       .then(data => {
         setPokemonName(data.name);
         setPokemonImg(data.sprites.front_default);
+        const types = data.types.map((typeData) => typeData.type.name);
+        setPokemonTypes(types);
       });
   }, [id]);
 
 
   return (
-    <div style={{width:'100%',display: 'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center'}}>
-      <CardContendor  title={pokemonName.toUpperCase()} image = {pokemonImg} />
-        <button className='' onClick={siguiente}> Siguiente </button>
+    <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+      <CardContendor title={pokemonName.toUpperCase()} image={pokemonImg} />
+      <ul>
+        {pokemonType.map((type, index) => (
+          <p key={index}>{type.toUpperCase()}</p>
+        ))}
+      </ul>
+      <button className='' onClick={siguiente}> Siguiente </button>
     </div>
   )
 }
