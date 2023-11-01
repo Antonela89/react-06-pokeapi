@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import CardContendor from './CardContenedor'
+import {Button, ButtonGroup } from 'react-bootstrap';
 
-const Siguiente = () => {
+
+function Botones() {
+
   let [pokemonName, setPokemonName] = useState('')
   let [pokemonImg, setPokemonImg] = useState('')
   const [pokemonType, setPokemonTypes] = useState([]);
   const [id, setId] = useState(1);
-
-  function siguiente() {
-    setId(id + 1);
-  }
-
+ 
 
   useEffect(() => {
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
@@ -32,9 +31,13 @@ const Siguiente = () => {
           <p style={{margin: '0 10px', fontWeight: 'bold'}} key={index}>{type.toUpperCase()}</p>
         ))}
       </ul>
-      <button className='' onClick={siguiente}> Siguiente </button>
+
+      <ButtonGroup>
+        <Button variant="secondary" size="lg" onClick={() => { if (id > 1) { setId(id - 1) }}}>Anterior</Button>
+        <Button variant="secondary" size="lg" onClick={() => { setId(id + 1) }}>Siguiente</Button>
+      </ButtonGroup>
     </div>
   )
 }
 
-export default Siguiente
+export default Botones
