@@ -16,11 +16,10 @@ function App() {
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
       .then(result => result.json())
       .then(data => {
-        (setPokemonName(data.name)),
-          (setPokemonImg(data.sprites.front_default))
-      })
-
-  }, [id])
+        setPokemonName(data.name);
+        setPokemonImg(data.sprites.front_default);
+      });
+  }, [id]);
 
 
 
