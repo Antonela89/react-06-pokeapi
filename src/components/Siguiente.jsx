@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import CardContendor from './CardContenedor'
 
 const Siguiente = () => {
     let [pokemonName, setPokemonName] = useState('')
@@ -21,14 +22,10 @@ const Siguiente = () => {
 
 
   return (
-    <>
-      <div className=''>
-        <h1 className=''>{pokemonName.toUpperCase()}</h1>
-        <img src={pokemonImg} alt="" className='' />
+    <div style={{width:'100%',display: 'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center'}}>
+      <CardContendor  title={pokemonName.toUpperCase()} image = {pokemonImg} />
         <button className='' onClick={siguiente}> Siguiente </button>
-        <p>© JSA </p>
-      </div>
-    </>
+    </div>
   )
 }
 
