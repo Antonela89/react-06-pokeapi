@@ -28,9 +28,9 @@ const Siguiente = () => {
   return (
     <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
       <CardContendor title={pokemonName.toUpperCase()} image={pokemonImg} />
-      <ul>
+      <ul style={{display: 'flex'}}>
         {pokemonType.map((type, index) => (
-          <p key={index}>{type.toUpperCase()}</p>
+          <p style={{margin: '0 10px', fontWeight: 'bold'}} key={index}>{type.toUpperCase()}</p>
         ))}
       </ul>
       <button className='' onClick={siguiente}> Siguiente </button>
