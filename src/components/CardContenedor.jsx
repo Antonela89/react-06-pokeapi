@@ -17,7 +17,7 @@ const CardContenedor = ({ image, title }) => {
         }}
     >
         <Card.Img
-        style={{ width: "100%", height: "65vh", objectFit: "cover", margin: '1rem'}}
+        style={{ width: "100%", height: "65vh", objectFit: "10vh", margin: '1rem'}}
         variant="top"
         src={image}
         />
