@@ -6,7 +6,7 @@ const CardContenedor = ({ image, title }) => {
     <Card
         style={{
             width: "30%",
-            height: "50vh",
+            height: "75vh",
             margin: "0.5rem",
             display: "flex",
             flexDirection: "column",
@@ -17,11 +17,11 @@ const CardContenedor = ({ image, title }) => {
         }}
     >
         <Card.Img
-        style={{ width: "50%", height: "50vh", objectFit: "cover" }}
+        style={{ width: "100%", height: "65vh", objectFit: "cover", margin: '1rem'}}
         variant="top"
         src={image}
         />
-        <Card.Body style={{ width: "80%", height: "15vh" }}>
+        <Card.Body style={{ width: "100%", height: "10vh" }}>
         <Card.Title
             style={{
                 textAlign: "center",

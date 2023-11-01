@@ -3,8 +3,8 @@ import CardContendor from './CardContenedor'
 
 const Siguiente = () => {
     let [pokemonName, setPokemonName] = useState('')
-  let [pokemonImg, setPokemonImg] = useState('')
-  const [id, setId] = useState(1);
+    let [pokemonImg, setPokemonImg] = useState('')
+    const [id, setId] = useState(1);
 
   function siguiente() {
     setId(id + 1);
@@ -16,7 +16,7 @@ const Siguiente = () => {
       .then(result => result.json())
       .then(data => {
         setPokemonName(data.name);
-        setPokemonImg(data.sprites.front_default);
+        setPokemonImg(data.sprites.other.dream_world.front_default)
       });
   }, [id]);
 
