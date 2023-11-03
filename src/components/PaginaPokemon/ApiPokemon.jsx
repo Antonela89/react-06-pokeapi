@@ -21,6 +21,18 @@ function ApiPokemon({mostrarApi, selectedPokemonId}) {
       });
   }, [id]);
 
+  const pokeAnterior = () => {
+    if (id > 1) {
+      setId(id - 1)
+      console.log(id)
+    }
+  }
+
+  const pokeSiguiente = () => {
+    setId(parseInt(id) + 1)
+    console.log(id)
+  }
+
 
   return (
     <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
@@ -32,10 +44,12 @@ function ApiPokemon({mostrarApi, selectedPokemonId}) {
       </ul>
 
       <ButtonGroup style={{ width: '30%'}}>
-        {/* <Button variant="secondary" size="lg" onClick={() => { if (id > 1) { setId(id - 1) }}}>Anterior</Button> */}
-        <Button variant="secondary" size="lg" onClick={() => {mostrarApi()}}>Volver</Button>
-        {/* <Button variant="secondary" size="lg" onClick={() => { setId(id + 1) }}>Siguiente</Button> */}
+        <Button variant="secondary" size="lg" onClick={() => pokeAnterior()}>Anterior</Button>
+        <Button variant="secondary" size="lg" onClick={() => pokeSiguiente()}>Siguiente</Button>
       </ButtonGroup>
+      
+      <Button variant="secondary" size="lg" onClick={() => { mostrarApi() }}>Volver</Button>
+
     </div>
   )
 }
