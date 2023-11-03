@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 
-const CardContenedor = ({ image, title }) => {
+const CardPokemon = ({image, title }) => {
     return (
     <Card
         style={{
@@ -37,4 +37,4 @@ const CardContenedor = ({ image, title }) => {
     );
 };
 
-export default CardContenedor;
+export default CardPokemon;
