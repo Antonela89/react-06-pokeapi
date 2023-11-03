@@ -10,7 +10,8 @@ function ApiPokemon({mostrarApi, selectedPokemonId}) {
   const [pokemonType, setPokemonTypes] = useState([]);
   const [pokemonAbilities, setPokemonAbilities] = useState([]);
   const [pokemonXP, setPokemonXP] = useState();
-  const [id, setId] = useState(1);
+  // const [id, setId] = useState(1);
+  const [id, setId] = useState(selectedPokemonId);
   
 
   useEffect(() => {

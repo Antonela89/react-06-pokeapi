@@ -10,17 +10,18 @@ const CardPokemon = ({image, title, text }) => {
             margin: "0.5rem",
             display: "flex",
             flexDirection: "row",
-            alignItems: "center",
+            // alignItems: "center",
             justifyContent: "center",
-            border: "2px solid black",
-            borderRadius: "20px",
+            // border: "2px solid black",
+                borderRadius: "20px",
         }}
     >
         <Card.Img
         style={{ width: "100%", height: "65vh", objectFit: "10vh", margin: '1rem'}}
         variant="top"
         src={image}
-        />
+            />
+            
         <Card.Body style={{ width: "100%", height: "10vh" }}>
         <Card.Title
             style={{
@@ -41,7 +42,7 @@ const CardPokemon = ({image, title, text }) => {
             </ul>
                     
             <div>
-                <h6 style={{ alignItems: 'center' }}>Habilidades:</h6>
+                <h6 style={{  textAlign:"center" }}>Habilidades:</h6>
                 <ul>
                     {text.habilidades.map((ab, index) => {
                         return (
@@ -51,7 +52,7 @@ const CardPokemon = ({image, title, text }) => {
                 </ul>  
             </div>
 
-            <h6 style={{ alignItems: 'center' }}>Base XP: {text.xp}</h6>
+            <h6 style={{  textAlign:"center" }}>Base XP: {text.xp}</h6>
         </Card.Text>
                 
         </Card.Body>
