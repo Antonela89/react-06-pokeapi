@@ -3,6 +3,7 @@ import CardPrincipal from './CardPrincipal'
 import {Button, ButtonGroup } from 'react-bootstrap';
 import ApiPokemon from '../PaginaPokemon/ApiPokemon'
 
+
 const Api = () => {
   const [data, setData] = useState([])
   const [previousUrl, setPreviousUrl] = useState(1);
@@ -42,24 +43,26 @@ const Api = () => {
 
 
   return (
-    <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+    <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: '#3A4361'}}>
     {mostrarDetalle ? (
       <ApiPokemon mostrarApi={mostrarApi} selectedPokemonId={selectedPokemonId}/> // Muestra el componente adicional si mostrarDetalle es verdadero
     ) : (
       <>
+      <h1 style={{ width: '100%', display: 'flex', justifyContent: 'center', color: 'white', textTransform: 'uppercase', margin:'1rem'}}>Pokedex</h1>
       <div style={{ width: '100%', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
         {data.map((pokemon, i) => {
-          return <CardPrincipal key={i} title={pokemon.name} url={pokemon.url} onClick={mostrarDetallePokemon} />;
+          return <CardPrincipal key={i} title={pokemon.name} url={pokemon.url} onClick={mostrarDetallePokemon} 
+          />;
         })}
       </div>
 
-      <div style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <ButtonGroup style={{ width: '30%' }}>
+      <div style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        <ButtonGroup style={{ width: '30%', margin: '1rem'}}>
           <Button variant="secondary" size="lg" onClick={() => fetchPokemonData(previousUrl)}>Anterior</Button>
           <Button variant="secondary" size="lg" onClick={() => fetchPokemonData(nextUrl)}>Siguiente</Button>
         </ButtonGroup>
       </div>
-        </>
+      </>
     )}
   </div>
   );

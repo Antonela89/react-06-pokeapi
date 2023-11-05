@@ -38,7 +38,8 @@ function ApiPokemon({mostrarApi, selectedPokemonId}) {
   const pokeSiguiente = () => {
     setId(parseInt(id) + 1)
     console.log(id)
-    
+  }
+
   const pokemonDescription = {
     tipo: pokemonType,
     habilidades: pokemonAbilities,
@@ -46,16 +47,15 @@ function ApiPokemon({mostrarApi, selectedPokemonId}) {
   }
 
   return (
-    <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+    <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: '#3A4361' }}>
       <CardPokemon title={pokemonName.toUpperCase()} image={pokemonImg} text={pokemonDescription} />
-
-      <ButtonGroup style={{ width: '30%'}}>
+      <ButtonGroup style={{ width: '30%',  marginBottom: '1rem'}}>
         <Button variant="secondary" size="lg" onClick={() => pokeAnterior()}>Anterior</Button>
-        <Button variant="secondary" size="lg" onClick={() => pokeSiguiente()}>Siguiente</Button>
+        <Button variant="secondary" size="lg" onClick={() => pokeSiguiente()}>Siguiente</Button>        
       </ButtonGroup>
-      
-      <Button variant="secondary" size="lg" onClick={() => { mostrarApi() }}>Volver</Button>
-
+      <ButtonGroup style={{ width: '30%', marginBottom: '1rem'}}>
+        <Button variant="secondary" size="lg" onClick={() => { mostrarApi() }}>Volver</Button>
+      </ButtonGroup>
     </div>
   )
 }

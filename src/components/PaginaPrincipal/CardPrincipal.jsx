@@ -22,23 +22,24 @@ const CardPrincipal = ({url, title, onClick }) => {
     <Card
         onClick={handleClick}
         style={{
-            width: "30%",
-            height: "75vh",
+            width: "20%",
+            height: "65vh",
             margin: "0.5rem",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-            border: "2px solid black",
+            //border: "2px solid black",
             borderRadius: "20px",
+            cursor: "pointer"
         }}
     >
         <Card.Img
-        style={{ width: "100%", height: "65vh", objectFit: "10vh", margin: '1rem'}}
+        style={{ width: "100%", height: "55vh", objectFit: "10vh", padding: '1rem'}}
         variant="top"
         src={image}
         />
-        <Card.Body style={{ width: "100%", height: "10vh" }}>
+        <Card.Body style={{ width: "100%", height: "10vh", padding: '1rem' }}>
         <Card.Title
             style={{
                 textAlign: "center",
