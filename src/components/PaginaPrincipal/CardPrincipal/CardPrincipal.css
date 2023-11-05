@@ -1,0 +1,83 @@
+@media (min-width:769px)  {
+    #cardPrincipal {
+        width:20%;
+        height:65vh;
+        margin:0.5rem;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* border: 2px solid black; */
+        border-radius: 20px;
+    }
+
+    #cardPrincipal:hover {
+        cursor: pointer;
+        background-color: #5D6C9C;
+        border:4px solid #6E7FB8;
+        color: white;
+    }
+
+    #imagenPokemonPrincipal {
+        width: 100%; 
+        height: 55vh;
+        object-fit: 10vh;
+        padding:1rem;
+    }
+
+    #cardBodyPrincipal {
+        width: 100%;
+        height: 10vh; 
+        padding:1rem;
+        display: flex;
+        align-items: center;
+    }
+
+    #PokemonNombrePrincipal {
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 0.5rem;
+    }
+}
+
+@media (min-width:391px) and (max-width: 768px) {
+    #cardPrinicial{
+        width: 50%;
+    }
+
+    #PokemonNombrePrincipal{
+        font-size: 1.25rem;
+    }
+
+    #imagenPokemonPrincipal {
+        height: 80% ;
+    }
+
+    #cardBodyPrincipal {
+        height: 20%;
+    }
+}
+
+@media (max-width: 390px) {
+    #cardPrincipal{
+        width: 100%;
+        height: 50vh;
+    }
+
+    #imagenPokemonPrincipal {
+        height: 80% ;
+    }
+
+    #PokemonNombrePrincipal{
+        font-size: 1rem;
+    }
+
+    #cardBodyPrincipal {
+        height: 20%;
+    }
+}
+
+
+

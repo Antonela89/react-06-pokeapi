@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import CardPokemon from './CardPokemon'
+import React, { useEffect, useState } from 'react';
+import CardPokemon from '../CardPokemon/CardPokemon';
 import {Button, ButtonGroup } from 'react-bootstrap';
+import './ApiPokemon.css';
 
 
 function ApiPokemon({mostrarApi, selectedPokemonId}) {
@@ -47,13 +48,13 @@ function ApiPokemon({mostrarApi, selectedPokemonId}) {
   }
 
   return (
-    <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: '#3A4361' }}>
+    <div id='contenedor'>
       <CardPokemon title={pokemonName.toUpperCase()} image={pokemonImg} text={pokemonDescription} />
-      <ButtonGroup style={{ width: '30%',  marginBottom: '1rem'}}>
+      <ButtonGroup id='grupoBotones'>
         <Button variant="secondary" size="lg" onClick={() => pokeAnterior()}>Anterior</Button>
         <Button variant="secondary" size="lg" onClick={() => pokeSiguiente()}>Siguiente</Button>        
       </ButtonGroup>
-      <ButtonGroup style={{ width: '30%', marginBottom: '1rem'}}>
+      <ButtonGroup id='grupoBotones'>
         <Button variant="secondary" size="lg" onClick={() => { mostrarApi() }}>Volver</Button>
       </ButtonGroup>
     </div>
