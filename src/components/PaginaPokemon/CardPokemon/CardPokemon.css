@@ -1,6 +1,6 @@
     #card {
         width: 60%;
-        height: 70vh;
+        height: 80vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -110,6 +110,11 @@
 }
 
 @media (max-width: 390px) {
+    #card {
+        width: 90%;
+        height: 100vh;
+    }
+
     #cardBody {
         height: 90vh;
     }
