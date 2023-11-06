@@ -112,11 +112,11 @@
 @media (max-width: 390px) {
     #card {
         width: 90%;
-        height: 100vh;
+        height: 90vh;
     }
 
     #cardBody {
-        height: 90vh;
+        height: 80vh;
     }
 
     #nombrePokemon{
