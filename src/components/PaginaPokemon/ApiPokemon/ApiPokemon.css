@@ -1,4 +1,3 @@
-@media (min-width:769px)  {
     #contenedor {
         width: 100%;
         height: 100vh;
@@ -10,7 +9,25 @@
     }
     
     #grupoBotones {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+@media (min-width:769px) {
+    #grupoBotones {
         width: 30%;
-        margin-bottom: 1rem;
+    }
+} 
+
+@media only screen and ((min-width:391px) and (max-width:768px)) {
+    #grupoBotones {
+        width: 50%;
     }
 }
+
+@media (max-width:390px) {
+    #grupoBotones {
+        width: 100%;
+        padding: 0 1rem;
+    }
+} 
