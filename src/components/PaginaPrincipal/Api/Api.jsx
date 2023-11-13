@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {Button, ButtonGroup } from 'react-bootstrap';
 import ApiPokemon from '../../PaginaPokemon/ApiPokemon/ApiPokemon';
 import CardPrincipal from '../CardPrincipal/CardPrincipal';
+import Footer from '../../Footer/Footer';
 import './Api.css';
 
 
@@ -11,6 +12,7 @@ const Api = () => {
   const [nextUrl, setNextUrl] = useState(null);
   const [mostrarDetalle, setMostrarDetalle] = useState(false); // Estado para controlar la visibilidad del componente adicional
   const [selectedPokemonId, setSelectedPokemonId] = useState(null); // Estado para el ID del Pokémon seleccionado
+  const [verFooter, setVerFooter] = useState(false);
 
 
   useEffect(() => {
@@ -42,7 +44,6 @@ const Api = () => {
     setMostrarDetalle(false);
   };
 
-
   return (
     <div id='contenedorApi'>
     {mostrarDetalle ? (
@@ -63,9 +64,18 @@ const Api = () => {
         </ButtonGroup>
       </>
     )}
+
+    { verFooter ? (
+      <>
+      <Footer/>
+      <Button className='boton' variant="secondary" size="lg" onClick={() => { setVerFooter(false) }}>Ocultar</Button>
+      </>) : 
+      (<Button className='boton' variant="secondary" size="lg" onClick={() => {setVerFooter(true)}}>Desarrolladores</Button>)
+    }
   </div>
   );
 };
 
 export default Api
+
 

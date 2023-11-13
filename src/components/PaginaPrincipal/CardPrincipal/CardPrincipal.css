@@ -1,6 +1,6 @@
     #cardPrincipal {
         width:20%;
-        height:65vh;
+        height:55vh;
         margin:0.5rem;
         display:flex;
         flex-direction: column;
@@ -40,9 +40,11 @@
         margin: 0.5rem;
     }
 
-@media (min-width:391px) and (max-width: 768px) {
-    #cardPrinicial{
-        width: 50%;
+@media only screen and (min-width: 391px) and (max-width: 768px){
+    #cardPrincipal{
+        width: 45%;
+        margin: 0.5rem;
+        height: 40vh;
     }
 
     #PokemonNombrePrincipal{

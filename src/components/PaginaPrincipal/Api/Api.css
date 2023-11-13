@@ -16,6 +16,7 @@
         text-transform: uppercase; 
         padding:1rem;
         font-size: 2.5rem;
+        font-weight: bold;
     }
 
     #contenedorCards {
@@ -26,21 +27,17 @@
         justify-content:center;
     }
 
-    #botones {
+    #botones, .boton {
         width: 30%; 
         margin: 1rem;
     }
 
 /*Tablet */
-@media (min-width:391px) and (max-width: 768px) {
+@media only screen and (min-width: 391px) and (max-width: 768px) {
 
     #titulo {
         font-size: 1.5rem; 
         padding: 0.5rem; 
-    }
-
-    #contenedorCards {
-        justify-content: space-between; 
     }
 
     #botones {
