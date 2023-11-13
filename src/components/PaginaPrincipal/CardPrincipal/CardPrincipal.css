@@ -61,7 +61,7 @@
 
 @media (max-width: 390px) {
     #cardPrincipal{
-        width: 100%;
+        width: 90%;
         height: 50vh;
         margin:0.5rem;
     }
