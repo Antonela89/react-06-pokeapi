@@ -1,6 +1,6 @@
     #cardPrincipal {
         width:25%;
-        height:55vh;
+        height:60vh;
         display:flex;
         margin: 0.5rem;
         flex-direction: column;
@@ -40,7 +40,7 @@
         margin: 0.5rem;
     }
 
-@media only screen  and (max-width: 768px){
+@media only screen and (max-width: 768px){
     #cardPrincipal{
         width: 45%;
         margin: 0.5rem;
