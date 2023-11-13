@@ -5,7 +5,6 @@
         align-items: center;
         justify-content: center; 
         background:#3A4361;
-        padding: 1rem;
     }
 
     #titulo {
@@ -40,7 +39,7 @@
         padding: 0.5rem; 
     }
 
-    #botones {
+    #botones,.boton {
         width: 75%; 
     }
 }
@@ -54,9 +53,11 @@
 
     #contenedorCards {
         flex-direction: column; 
+        align-items: center;
+        justify-content: center;
     }
 
-    #botones {
+    #botones, .boton {
         width: 100%;
         margin: 0.5rem;
     }

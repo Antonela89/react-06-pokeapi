@@ -7,6 +7,8 @@
         justify-content: center;
         /* border: 2px solid black; */
         border-radius: 20px;
+        margin:0;
+        padding: 0;
     }
 
     #nombrePokemon {
@@ -113,6 +115,8 @@
     #card {
         width: 90%;
         height: 90vh;
+        margin: 0;
+        padding: 0;
     }
 
     #cardBody {
